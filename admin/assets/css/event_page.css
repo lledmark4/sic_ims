@@ -1,0 +1,44 @@
+.events-header {
+    margin-bottom: 20px;
+}
+
+.events-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.add-event-btn, .export-event-btn, .edit-btn, .delete-btn, .print-btn, .settings-btn {
+    padding: 8px 12px;
+    margin: 4px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-event-btn:hover, .export-event-btn:hover, .edit-btn:hover, .delete-btn:hover, .print-btn:hover, .settings-btn:hover {
+    background-color: #003060;
+}
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.events-table th, .events-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.events-table th {
+    background-color: #f4f4f4;
+}
+
+.events-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}

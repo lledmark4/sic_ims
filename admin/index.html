@@ -1,0 +1,176 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/sidebar.css">
+    <link rel="stylesheet" href="./assets/css/mainContent.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+
+    <!-- Main content pages -->
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="./assets/css/team_pages.css">
+    <link rel="stylesheet" href="./assets/css/event_page.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_container">
+            <button id="menu_button" class="menu_Button"><i class="fa-solid fa-bars"></i></button>
+            <div class="web_name">
+                <h3>SPORTS+</h3>
+            </div>
+            <div class="search_bar">
+                <p>Search</p>
+            </div>
+            <div class="profile">
+                <p>Profile</p>
+            </div>
+        </div>
+    </header>
+    <div class="overlay menu_Button"></div>
+    <aside class="sidebar">
+        
+        <div class="sb_header">
+            <h3>SPORTS+</h3>
+            <button id="menu_button" class="menu_Button"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <ul class="sb_items">
+            <li>
+                <a href="" id="dashboard-btn" onclick="loadContent('dashboard', this)" class="sb_item">
+                    <i class="item_icon fas fa-home"></i>
+                    <span class="item_text">Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="" id="teams-btn" onclick="loadContent('teams', this)" class="sb_item">
+                    <i class="item_icon fas fa-user-friends"></i>
+                    <span class="menu-text">Teams</span>
+                </a>
+            </li>
+
+
+            <ul class="sub_menu">
+                <div class="sb_item">
+                    <i class="item_icon fas fa-user-friends"></i>
+                    <span class="menu-text">Events</span>
+                    <i class="fas fa-chevron-down submenu_arrow"></i>
+                </div>
+                <ul class="sub_menu_items">
+                    <li>
+                        <a href="" class="sub_item">
+                            <span class="item_text">Add Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="events-btn" onclick="loadContent('events', this)" class="sub_item">
+                            <span class="menu-text">List of Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sub_item">
+                            <span class="menu-text">Event Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sub_item">
+                            <span class="menu-text">Game Brackets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sub_item">
+                            <span class="menu-text">Event Rule</span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+            <li>
+                <a href="" class="sb_item">
+                    <i class="item_icon fas fa-list"></i>
+                    <span class="item_text">List of Players</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="sb_item">
+                    <i class="item_icon fas fa-bullhorn"></i>
+                    <span class="item_text">Announcements</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="sb_item">
+                    <i class="item_icon fas fa-award"></i>
+                    <span class="item_text">Medal Tally</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="sb_item">
+                    <i class="item_icon fas fa-home"></i>
+                    <span class="item_text">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="sb_item">
+                    <i class="item_icon fas fa-sign-out-alt"></i>
+                    <span class="item_text">Logout</span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="sb_footer">
+            <button id="darkModeToggle" onclick="toggleDarkMode()">
+                <i id="darkModeIcon">🌙</i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </aside>
+    <main class="main_content" id="mainContent">
+        <!-- Dynamic content will be loaded here -->
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+        function loadContent(scriptName, button) {
+            // Save the current page to local storage
+            localStorage.setItem("currentPage", scriptName);
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll("aside .sb_item");
+            buttons.forEach(btn => btn.classList.remove("active-btn"));
+
+            // Add active class to the clicked button
+            button.classList.add("active-btn");
+
+            // Remove existing script to reload it
+            const existingScript = document.querySelector(`script[src="./pages/${scriptName}.js"]`);
+            if (existingScript) existingScript.remove();
+
+            // Load the new script
+            const script = document.createElement("script");
+            script.src = `./pages/${scriptName}.js`;
+            script.type = "text/javascript";
+            document.body.appendChild(script);
+        }
+
+        // Load the last visited page from local storage or default to "dashboard"
+        const savedPage = localStorage.getItem("currentPage") || "dashboard";
+        const activeButton = document.getElementById(`${savedPage}-btn`);
+        if (activeButton) activeButton.classList.add("active-btn");
+        loadContent(savedPage, activeButton);
+    </script>
+
+</body>
+
+</html>
