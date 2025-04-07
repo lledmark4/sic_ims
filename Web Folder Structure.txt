@@ -1,0 +1,23 @@
+/streaming_website
+│── /public
+│   ├── index.php        # Homepage
+│   ├── video.php        # Video player page
+│   ├── login.php        # User login page
+│   ├── register.php     # User registration page
+│   ├── admin.php        # Admin panel
+│   ├── upload.php       # Video upload page
+│   ├── /uploads         # Stores uploaded videos
+│── /includes
+│   ├── config.php       # Database connection
+│   ├── auth.php         # Authentication system
+│   ├── video_functions.php # Video processing functions
+│── /admin
+│   ├── dashboard.php    # Admin dashboard
+│   ├── manage_videos.php # Video management
+│── /assets
+│   ├── /css             # Stylesheets
+│   ├── /js              # JavaScript files
+│── /db
+│   ├── database.sql     # Database schema
+│── .htaccess            # URL rewriting for clean URLs
+│── README.md            # Documentation

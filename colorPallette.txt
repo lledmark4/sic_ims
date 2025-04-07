@@ -1,0 +1,66 @@
+/* CVS */
+
+1d5c96,7db0de,12395d
+
+/* CVS with # */
+
+#1d5c96,  #7db0de,  #12395d
+
+/* Array */
+
+["1d5c96", "7db0de", "12395d"]
+
+/* Array with # */
+
+["#1d5c96", "#7db0de", "#12395d"]
+
+
+🌙 Navy-Themed Dark Mode Palette
+Primary (Navy): #1f3a93 - Main accent color for headers, buttons, and important elements.
+
+Background (Dark Navy): #12172b - Deep navy background for the entire layout.
+
+Card/Container (Slate Gray): #1e2438 - For cards, containers, and panels.
+
+Text (Light Gray): #e0e6ed - Primary text for readability.
+
+Muted Text (Medium Gray): #7d8597 - For secondary text or labels.
+
+Accent (Coral): #e74c3c - For warnings, alerts, or action buttons.
+
+Highlight (Cyan): #00bcd4 - To add a modern and lively touch to interactive elements.
+
+Success (Emerald Green): #27ae60 - For positive indicators or success messages.
+
+💡 Usage Tips
+Use Dark Navy (#12172b) as the main background color to give a moody, sophisticated feel.
+
+Use Slate Gray (#1e2438) for cards and containers to maintain contrast without making them too bright.
+
+Use Light Gray (#e0e6ed) for text to ensure readability against dark backgrounds.
+
+Use Medium Gray (#7d8597) for muted or secondary text.
+
+Use Coral (#e74c3c) sparingly for error messages or critical actions to make them pop.
+
+Use Cyan (#00bcd4) for buttons, links, or highlights to break the monotony of dark shades.
+
+Use Emerald Green (#27ae60) for success messages or confirmation highlights.
+
+
+
+Use Navy (#1f3a93) for headers, sidebars, and important navigation elements.
+
+Use Light Blue (#3498db) to highlight active items or buttons.
+
+Use Coral (#e74c3c) for error messages or calls to action.
+
+Keep Background (#f4f4f9) light to maintain contrast and readability.
+
+Use White (#ffffff) for cards and content backgrounds to create separation.
+
+Use Dark Gray (#333333) for main text and Medium Gray (#7f8c8d) for less important or secondary text.
+
+Use Green (#27ae60) for positive feedback or success notifications.
+
+Let me know if you’d like a preview or specific UI elements styled with this palette! 😄

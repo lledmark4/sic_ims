@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTS+ PUBLIC-PAGE</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/main_content.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="ims_header">
+        <div class="site_name">
+            <button id="menu_button" class="menu_Button"><i class="fa-solid fa-bars"></i></button>
+            <h3>SPORTS+</h3>
+        </div>
+        <div class="header_group">
+            <div class="srch_cont">
+                <button class="header_item" type="button">Search</button>
+            </div>
+            <div class="overlay menu_Button"></div>
+            <nav class="navbar" aria-label="Main navigation">
+                
+                <ul>
+                    <div class="nav_header">
+                        <h3>SPORTS+</h3>
+                        <button id="menu_button" class="menu_Button"><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                    <li><a class="header_item" href="#">Home</a></li>
+                    <li><a class="header_item" href="#">Events</a></li>
+                    <li><a class="header_item" href="#">Teams</a></li>
+                    <li><a class="header_item" href="#">Announcements</a></li>
+                    <li><a class="header_item" href="#">Guidelines</a></li>
+                </ul>
+                
+            </nav>
+            <div class="login_cont">
+                <a class="header_item" href="./login.html">Login</a>
+            </div>
+        </div>
+    </header>
+    <main class="ims_main_content">
+
+    </main>
+    <footer class="ims_footer">
+
+    </footer>
+
+    <script>
+        // Event Delegation: Listen for clicks on the document
+        document.addEventListener('click', function (event) {
+            // Check if the clicked element or its parent has the "menu_Button" class
+            if (event.target.closest('.menu_Button')) {
+                document.body.classList.toggle('menu_expand'); // Adjusts the grid layout
+                document.querySelector('.navbar').classList.toggle('expand');
+            }
+        });
+    </script>
+</body>
+
+</html>

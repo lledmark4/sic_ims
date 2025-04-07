@@ -1,0 +1,57 @@
+1. SQL Injection (SQLi)
+Issue: Attackers manipulate SQL queries through user input fields.
+Solution: Use prepared statements with PDO or MySQLi.
+
+$stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+$stmt->execute([$email]);
+
+2. Cross-Site Scripting (XSS)
+Issue: Attackers inject malicious scripts into web pages.
+Solution: Sanitize and escape output using htmlspecialchars().
+
+echo htmlspecialchars($user_input, ENT_QUOTES, 'UTF-8');
+
+3. Cross-Site Request Forgery (CSRF)
+Issue: Attackers trick users into performing actions without consent.
+Solution: Use CSRF tokens in forms.
+
+<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
+4. File Upload Vulnerabilities
+Issue: Attackers upload malicious files (e.g., PHP scripts).
+Solution: Restrict file types and store uploads outside the web root.
+
+$allowed = ['jpg', 'png', 'pdf'];
+if (!in_array($file_extension, $allowed)) {
+    die("Invalid file type.");
+}
+
+5. Remote Code Execution (RCE)
+Issue: Unvalidated input used in functions like eval(), exec(), etc.
+Solution: Avoid dangerous functions and validate user input.
+
+6. Session Hijacking
+Issue: Attackers steal session cookies.
+Solution: Enable HTTPOnly and Secure flags for cookies.
+
+session_set_cookie_params([
+    'httponly' => true,
+    'secure' => true,
+    'samesite' => 'Strict'
+]);
+
+7. Insecure Direct Object References (IDOR)
+Issue: Attackers modify URL parameters to access unauthorized data.
+Solution: Use server-side authentication and validate access rights.
+
+8. Secure Passwords
+$hashed_password = password_hash($password, PASSWORD_BCRYPT);
+To verify passwords:
+
+if (password_verify($password, $hashed_password)) {
+    echo "Login successful";
+}
+9.Prevent Directory Browsing
+Add this to .htaccess in your project folder:
+
+Options -Indexes

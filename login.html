@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #bdcaec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.648);
+            backdrop-filter: blur(2px) saturate(80%);
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+            box-shadow: 0 2px 5px rgba(255, 191, 0, 0.6);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: #2563eb;
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            display: block;
+            color: rgb(57, 55, 55);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.7rem;
+            margin: 0.3rem 0;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .login-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .forgot-link {
+            margin-top: 1rem;
+        }
+
+        .forgot-link a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .forgot-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="login-btn" onclick="admin()">Login</button>
+                <div class="forgot-link">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function admin(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = "./admin/index.html";
+        }
+
+        // Attach the admin function to the form submission
+        document.querySelector("form").addEventListener("submit", admin);
+
+        // function handleLogin(event) {
+        //     event.preventDefault(); // Prevent form submission
+        //     const username = document.getElementById('username').value;
+        //     const password = document.getElementById('password').value;
+
+        //     // Perform login logic (e.g., send to server)
+        //     fetch('/login', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({ username, password }),
+        //     })
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             if (data.success) {
+        //                 window.location.href = "/dashboard"; // Redirect on success
+        //             } else {
+        //                 alert("Login failed! " + data.message);
+        //             }
+        //         })
+        //         .catch(error => console.error('Error:', error));
+        // }
+    </script>
+</body>
+
+</html>
