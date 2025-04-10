@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .custom_select_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        max-width: 300px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .custom_select_wrapper label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .custom_select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 18px;
+        cursor: pointer;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .custom_select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+</style>
+
+<body>
+    <div class="custom_select_wrapper">
+        <label for="sports">Choose a sport:</label>
+        <select id="sports" name="sports" class="custom_select">
+            <option value="basketball">Basketball</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="chess">Chess</option>
+            <option value="track">Track & Field</option>
+        </select>
+    </div>
+</body>
+
+</html>

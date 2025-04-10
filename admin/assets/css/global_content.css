@@ -1,0 +1,204 @@
+.ims_sub_header {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--sub-header-text);
+    padding-bottom: 10px;
+    height: 40px;
+}
+
+.ims_sub_header h2 {
+    color: var(--sub-header-text);
+}
+
+
+.ims_sub_header button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    padding: 0px 12px;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.ims_sub_header button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+.dark_mode .ims_sub_header button:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-charcoal);
+}
+
+
+.ims_sub_details {
+    display: flex;
+    height: 30px;
+}
+
+.ims_sub_details p {
+    color: var(--sub-text);
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+}
+
+ .top_panel {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.top_panel .table_info{
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    color: var(--dark-charcoal);
+    
+}
+.mobile .top_panel .table_info{
+    display: none;
+}
+.dark_mode .top_panel .table_info{
+    color: rgb(213, 213, 213);
+}
+.top_panel .table_info .info_group{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 3px;
+    width: auto;
+    font-size: 1rem;
+    border-bottom: solid 1px gray;
+    cursor: pointer;
+}
+.top_panel .table_info .info_group:hover{
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+.top_panel .table_info .info_group.active{
+    border-bottom: solid 1px var(--primary-color);
+    color: var(--primary-color);
+}
+.dark_mode .top_panel .table_info .info_group.active{
+    border-bottom: solid 1px var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.top_panel .table_info span{
+    color: var(--primary-color);
+    background-color: rgb(217, 217, 217);
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 14px;
+}
+.dark_mode .top_panel .table_info span{
+    color: var(--secondary-color);
+    background-color: rgb(52, 50, 50);
+}
+
+.top_panel .top_buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0px 12px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.ims_table table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(30, 58, 138, 0.6);
+    /* border: 1px solid var(--primary-color); */
+}
+
+.dark_mode .ims_table table {
+    box-shadow: 0 2px 5px rgba(255, 191, 0, 0.6);
+    /* border: 1px solid transparent; */
+}
+
+.ims_table th,
+.ims_table td {
+    padding: 10px;
+    text-align: left;
+    border: none;
+    /* border: 1px solid var(--cool-gray); */
+}
+
+.ims_table th {
+    background: var(--primary-color);
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
+}
+
+.ims_table tr:nth-child(odd) td {
+    background: var(--very-light-gray);
+    color: var(--light-table-text);
+}
+
+.ims_table tr:nth-child(even) td {
+    background: var(--light-gray);
+    color: var(--light-table-text);
+}
+
+.dark_mode .ims_table tr:nth-child(odd) td {
+    background: var(--dark-charcoal);
+    color: var(--dark-table-text);
+}
+
+.dark_mode .ims_table tr:nth-child(even) td {
+    background: var(--lighter-charcoal);
+    /* Use a lighter shade for contrast */
+    color: var(--dark-table-text);
+}
+
+.ims_table button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ims_table button:hover {
+    background-color: #218838;
+}
+
+.ims_sub_footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.ims_sub_footer button {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 12px;
+    height: 30px;
+}
+
+.ims_sub_footer .edit_btn {
+    background-color: green;
+}
+
+.ims_sub_footer .delete_btn {
+    background-color: red;
+}
